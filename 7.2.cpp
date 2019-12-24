@@ -2,15 +2,18 @@
 using namespace std;
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    cout<<"Введите числа"<<endl;
-    float a,b,c;
-    cin>>a>>b>>c;
-    if ((a<b)&&(b<c)) {
-        cout<<"True"<<endl;
+    int a, b, c;
+    
+    cin >> a >> b >> c;
+    
+    if (c > b && b > a)
+    {
+        cout << "true" << endl;
+        
     }
-    else {
-        cout<<"False"<<endl;
-        return 0;
+    else
+    {
+        cout << "false" << endl;
     }
+    return 0;
 }
