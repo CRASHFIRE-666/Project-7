@@ -2,14 +2,17 @@
 using namespace std;
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    cout<<"Введите числа"<<endl;
-    int a;
-    cin>>a;
-    if ((a<100)&&(a>9)&&(a%2==0)) {
-        cout<<"True"<<endl;
+    int x;
+    
+    cin >> x;
+    
+    if ((x / 10 > 0) && (x / 10 < 11) && (x % 2 == 0))
+    {
+        cout << "true" << endl;
     }
-    else {
-        cout<<"False"<<endl;
+    else
+    {
+        cout << "false" << endl;
     }
+    return 0;
 }
