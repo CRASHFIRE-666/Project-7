@@ -2,18 +2,23 @@
 using namespace std;
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    cout<<"Введите число"<<endl;
-    int a1,a2,a3,a;
-    cin>>a;
-    a1=a/100;
-    a2=(a%100)/10;
-    a3=a%10;
-    if ( ((a1>a2)&&(a2>a3)) or ((a1<a2)&&(a2<a3)) ) {
-        cout<<"True"<<endl;
+    int x, a, b, c;
+    
+    cin >> x;
+    
+    a = x / 100;
+    b = x / 10 % 10;
+    c = x % 10;
+    
+    
+    if (((c >= b) && (b >= a)) || ((a >= b) && (b >= c)))
+    {
+        cout << "true" << endl;
     }
-    else {
-        cout<<"False"<<endl;
-        return 0;
+    else
+    {
+        cout << "false" << endl;
     }
+    
+    return 0;
 }
