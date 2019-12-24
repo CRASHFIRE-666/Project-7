@@ -1,16 +1,24 @@
 #include <iostream>
 using namespace std;
+#include <cmath>
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    cout<<"Введите числа"<<endl;
-    int a,b,c;
-    cin>>a>>b>>c;
-    if ((a+b>c)and(a+c>b)and(c+b>a)) {
-        cout<<"True"<<endl;
+    int a, b, c, A, B, C;
+    
+    cin >> a >> b >> c;
+    
+    A = sqrt(c * c + b * b);
+    B = sqrt(a * a + c * c);
+    C = sqrt(a * a + b * b);
+    
+    if (a == A || b == B || c == C)
+    {
+        cout << "true" << endl;
     }
-    else {
-        cout<<"False"<<endl;
-        return 0;
+    else
+    {
+        cout << "false" << endl;
     }
+    
+    return 0;
 }
